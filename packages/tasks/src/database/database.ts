@@ -13,12 +13,20 @@ export class Database{
     }
 
     public async getConnection(): Promise<void>{
-        try{
-            await this._mongoose.connect(this._db_uri, this._dbconfiguration)
-            console.log('DB is connected')
-        }
-        catch(e){
-            console.log(e)
+        let retries = 5;
+        while(retries){
+            try{
+                await this._mongoose.connect(this._db_uri, this._dbconfiguration)
+                console.log('DB is connected')
+                break;
+            }
+            catch(e){
+                console.log(e)
+                retries -= 1
+                console.log('retries:', retries)
+                //wait 5 seconds for retry
+                await new Promise((res) => setTimeout(res, 5000))
+            }
         }
     }
 }
