@@ -6,12 +6,14 @@ import { configuration, IConfiguration } from './config/configuration'
 import {Database} from './database/database'
 //routes
 import IndexRouter from './routes/index.routes'
+import TaskRouter from './routes/task.routes'
 class Server {
     private _app: Application
     public _config: IConfiguration
     private _database: Database
 
     private _indexRouter: IndexRouter
+    private _taskRouter: TaskRouter
 
     constructor(){
         this._app = express()
@@ -19,6 +21,7 @@ class Server {
         this._database =  new Database(this._config.DB_URI)
 
         this._indexRouter = new IndexRouter
+        this._taskRouter = new TaskRouter
 
         this.initDatabase()
         this.initRabbit()
@@ -44,6 +47,7 @@ class Server {
 
     private initRoutes(){
         this._app.use('/', this._indexRouter._router)
+        this._app.use('/task', this._taskRouter._router)
     }
 
     public run(){
