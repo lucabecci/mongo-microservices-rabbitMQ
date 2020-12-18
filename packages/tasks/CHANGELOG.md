@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.2.0](https://github.com/lucabecci/mongo-microservices-rabbitMQ/compare/v1.1.0...v1.2.0) (2020-12-18)
+
+
+### Features
+
+* **micro/tasks:** database connection added ([930c273](https://github.com/lucabecci/mongo-microservices-rabbitMQ/commit/930c2737669c0f6e2953aaee02be0d600f66790d))
+
+
+
+
+
 # 1.1.0 (2020-12-18)
 
 
