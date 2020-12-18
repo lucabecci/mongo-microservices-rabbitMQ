@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.3.0](https://github.com/lucabecci/mongo-microservices-rabbitMQ/compare/v1.2.0...v1.3.0) (2020-12-18)
+
+
+### Features
+
+* **@micro/tasks:** first route added ([ae06a64](https://github.com/lucabecci/mongo-microservices-rabbitMQ/commit/ae06a64549f20cc2e73feef8c6fed0b0e80d210b))
+* **@micro/tasks:** first route added ([2adf0dd](https://github.com/lucabecci/mongo-microservices-rabbitMQ/commit/2adf0ddf99e7f5f5f255ff67c86161a73aa8dcf0))
+
+
+
+
+
 # [1.2.0](https://github.com/lucabecci/mongo-microservices-rabbitMQ/compare/v1.1.0...v1.2.0) (2020-12-18)
 
 
