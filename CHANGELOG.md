@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.4.0](https://github.com/lucabecci/mongo-microservices-rabbitMQ/compare/v1.3.0...v1.4.0) (2020-12-18)
+
+
+### Features
+
+* **@micro/tasks:** controller and router for task added ([35c54b0](https://github.com/lucabecci/mongo-microservices-rabbitMQ/commit/35c54b0a617384e2f0e910d2c985945c15ddf9e4))
+* **@micro/tasks:** task controller and router added in server ([e36ff96](https://github.com/lucabecci/mongo-microservices-rabbitMQ/commit/e36ff9637efc509bf5678354097aee4fa3ed729a))
+
+
+
+
+
 # [1.3.0](https://github.com/lucabecci/mongo-microservices-rabbitMQ/compare/v1.2.0...v1.3.0) (2020-12-18)
 
 
