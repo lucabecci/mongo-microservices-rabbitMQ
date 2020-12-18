@@ -4,20 +4,26 @@ import morgan from 'morgan'
 
 import { configuration, IConfiguration } from './config/configuration'
 import {Database} from './database/database'
-
+//routes
+import IndexRouter from './routes/index.routes'
 class Server {
     private _app: Application
     public _config: IConfiguration
     private _database: Database
+
+    private _indexRouter: IndexRouter
 
     constructor(){
         this._app = express()
         this._config = configuration
         this._database =  new Database(this._config.DB_URI)
 
+        this._indexRouter = new IndexRouter
+
         this.initDatabase()
         this.initRabbit()
         this.initConfig()
+        this.initRoutes()
     }
 
     private async initDatabase(): Promise<void>{
@@ -34,6 +40,10 @@ class Server {
         }))
         this._app.use(morgan(this._config.MORGAN_MODE))
         this._app.set('port', this._config.PORT)
+    }
+
+    private initRoutes(){
+        this._app.use('/', this._indexRouter._router)
     }
 
     public run(){

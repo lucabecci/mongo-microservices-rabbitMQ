@@ -6,13 +6,20 @@
     "scripts": {
         "test": "lerna run test --scope={@walnut/common,@walnut/server}",
         "new-version": "lerna version --conventional-commits --yes",
-        "diff": "lerna diff"
+        "diff": "lerna diff",
+        "clean:code": "lerna run clean:code --scope={@micro/tasks}"
     },
     "name": "mongo-microservices-tasks",
     "version": "1.0.0",
     "main": "index.js",
     "license": "MIT",
     "devDependencies": {
+        "husky": "^4.3.6",
         "lerna": "^3.22.1"
-    }
+    },
+    "husky": {
+        "hooks": {
+          "pre-commit": "yarn run clean:code"
+        }
+      }
 }
