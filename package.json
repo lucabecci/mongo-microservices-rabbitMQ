@@ -7,7 +7,7 @@
         "test": "lerna run test --scope={@walnut/common,@walnut/server}",
         "new-version": "lerna version --conventional-commits --yes",
         "diff": "lerna diff",
-        "clean:code": "lerna run clean:code --scope={@micro/tasks}"
+        "clean": "lerna run clean"
     },
     "name": "mongo-microservices-tasks",
     "version": "1.0.0",
@@ -19,7 +19,7 @@
     },
     "husky": {
         "hooks": {
-          "pre-commit": "yarn run clean:code"
+          "pre-commit": "yarn run clean"
         }
       }
 }

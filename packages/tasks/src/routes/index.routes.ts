@@ -1,20 +1,20 @@
-import {Router, IRouter} from 'express'
-import IndexController from '../controllers/index.controller'
+import { Router, IRouter } from "express";
+import IndexController from "../controllers/index.controller";
 
 class IndexRouter {
-    public _router: IRouter
-    public _indexController: IndexController
-    constructor(){
-        this._router = Router()
+  public _router: IRouter;
+  public _indexController: IndexController;
+  constructor() {
+    this._router = Router();
 
-        this._indexController = new IndexController
+    this._indexController = new IndexController();
 
-        this.routes()
-    }
+    this.routes();
+  }
 
-    private routes(){
-        this._router.get('/', this._indexController.getIndex)
-    }
+  private routes() {
+    this._router.get("/", this._indexController.getIndex);
+  }
 }
 
-export default IndexRouter
+export default IndexRouter;
